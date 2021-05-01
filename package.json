@@ -1,0 +1,23 @@
+{
+  "name": "Docker_DevOps_Node.js_Express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kavinda-ravishan/Docker_DevOps_Node.js_Express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kavinda-ravishan/Docker_DevOps_Node.js_Express/issues"
+  },
+  "homepage": "https://github.com/kavinda-ravishan/Docker_DevOps_Node.js_Express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
