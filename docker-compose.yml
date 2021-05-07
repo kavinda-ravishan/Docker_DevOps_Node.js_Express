@@ -12,3 +12,17 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=3883
+    volumes:
+      - mogo-db:/data/db # named volume
+volumes:
+  mongo-db:
+# Connect to mogo : $ docker exec -it bash
+# $ mongo -u admin -p 3883
+# or
+# $ docker exec -it docker_devops_nodejs_express_mongo_1 mongo -u admin -p 3883
+# >> db : show connected database
+# >> use database_name : create and connect to new database
+# >> show dbs : show all databaces (dbs least have 1 document)
+# >> db.books.insert({"name":"book_name"}) : add new entry
+# >> db.books.find() : show all entries
+# >> exit : for logout
