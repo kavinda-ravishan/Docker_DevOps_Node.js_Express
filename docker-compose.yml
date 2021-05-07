@@ -13,7 +13,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=3883
     volumes:
-      - mogo-db:/data/db # named volume
+      - mongo-db:/data/db # named volume
 volumes:
   mongo-db:
 # Connect to mogo : $ docker exec -it bash
