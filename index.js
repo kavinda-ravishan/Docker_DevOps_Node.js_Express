@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const postRouter = require("./routes/postRoutes");
+const userRouter = require("./routes/userRoutes");
 
 const {
   MONGO_USER,
@@ -37,6 +38,7 @@ app.get("/", (req, res) => {
 
 app.use(express.json());
 app.use("/api/v1/posts", postRouter);
+app.use("/api/v1/user", userRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
