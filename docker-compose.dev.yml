@@ -14,4 +14,5 @@ services:
       - MONGO_PORT=27017
       - MONGO_USER=admin
       - MONGO_PASSWORD=3883
+      - SESSION_SECRET=*&d9cs89
     command: npm run dev

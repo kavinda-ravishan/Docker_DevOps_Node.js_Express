@@ -20,6 +20,7 @@ services:
     image: redis
 volumes:
   mongo-db:
+# Mongo
 # Connect to mogo : $ docker exec -it bash
 # $ mongo -u admin -p 3883
 # or
@@ -30,3 +31,8 @@ volumes:
 # >> db.books.insert({"name":"book_name"}) : add new entry
 # >> db.books.find() : show all entries
 # >> exit : for logout
+
+# Redis
+# $ docker exec -it docker_devops_nodejs_express_redis_1 redis-cli
+# KEYS * : for see all entries
+# GET "sess:MV0ghOF33uqaSFtk7XbFYDIQqPaaMYDk" : GET "sess:session_key" for get information
