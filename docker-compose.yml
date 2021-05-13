@@ -16,6 +16,8 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=3883
     volumes:
       - mongo-db:/data/db # named volume
+  redis:
+    image: redis
 volumes:
   mongo-db:
 # Connect to mogo : $ docker exec -it bash
