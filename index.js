@@ -6,6 +6,7 @@ const userRouter = require("./routes/userRoutes");
 const redis = require("redis");
 const session = require("express-session");
 const RedisStore = require("connect-redis")(session);
+const cors = require("cors");
 
 const {
   MONGO_USER,
@@ -21,6 +22,8 @@ const redisClient = redis.createClient({
   host: REDIS_URL,
   port: REDIS_PORT,
 });
+
+app.enable("trust proxy");
 
 const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
 
@@ -46,6 +49,9 @@ connectWithRetry();
 app.get("/api/v1", (req, res) => {
   res.send("<h1>Web Server!</h1>");
 });
+
+// allow to deferent domains to access the api
+app.use(cors({}));
 
 app.use(
   session({
