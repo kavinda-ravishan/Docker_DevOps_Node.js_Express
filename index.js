@@ -56,7 +56,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       httpOnly: true,
-      maxAge: 1800000,
+      maxAge: 30000,
     },
   })
 );
