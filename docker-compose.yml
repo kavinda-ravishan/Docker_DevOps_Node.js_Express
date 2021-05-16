@@ -7,6 +7,7 @@ services:
     # ro : read only
   node-app:
     build: .
+    image: slspider/node-app
     environment:
       - PORT=3000
     depends_on:
