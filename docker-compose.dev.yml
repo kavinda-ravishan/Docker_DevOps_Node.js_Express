@@ -17,5 +17,9 @@ services:
       - MONGO_PORT=27017
       - MONGO_USER=admin
       - MONGO_PASSWORD=admin
-      - SESSION_SECRET=*&d9cs89
+      - SESSION_SECRET=d9cs89
     command: npm run dev
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
